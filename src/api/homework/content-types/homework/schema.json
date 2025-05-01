@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homeworks",
+  "info": {
+    "singularName": "homework",
+    "pluralName": "homeworks",
+    "displayName": "Homework",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Duree": {
+      "type": "string"
+    },
+    "FiniOuPas": {
+      "type": "integer"
+    },
+    "iconeName": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "teacherImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
