@@ -16,6 +16,15 @@ export default [
     },
   },
   'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['*'], 
+      headers: ['Content-Type', 'Authorization', 'x-api-key'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      credentials: true,
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
