@@ -473,6 +473,7 @@ export interface ApiHomeworkHomework extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    video: Attribute.Component<'videos.video', true>;
   };
 }
 

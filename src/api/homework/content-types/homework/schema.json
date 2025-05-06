@@ -49,6 +49,12 @@
       "type": "component",
       "repeatable": true,
       "component": "chapitres.chapitre"
+    },
+    "video": {
+      "displayName": "video",
+      "type": "component",
+      "repeatable": true,
+      "component": "videos.video"
     }
   }
 }
