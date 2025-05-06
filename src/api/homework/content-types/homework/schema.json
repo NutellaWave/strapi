@@ -31,14 +31,24 @@
       "type": "datetime"
     },
     "teacherImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "chapitre": {
+      "displayName": "chapitre",
+      "type": "component",
+      "repeatable": true,
+      "component": "chapitres.chapitre"
     }
   }
 }

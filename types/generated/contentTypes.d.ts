@@ -449,6 +449,7 @@ export interface ApiHomeworkHomework extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
+    chapitre: Attribute.Component<'chapitres.chapitre', true>;
     color: Attribute.String;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -458,6 +459,7 @@ export interface ApiHomeworkHomework extends Schema.CollectionType {
     > &
       Attribute.Private;
     date: Attribute.DateTime;
+    description: Attribute.String;
     Duree: Attribute.String;
     FiniOuPas: Attribute.Integer;
     iconeName: Attribute.String;
@@ -854,10 +856,12 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
+    AncienneEcole: Attribute.String;
+    avatar: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     blocked: Attribute.Boolean & Attribute.DefaultTo<false>;
+    classe: Attribute.String;
     confirmationToken: Attribute.String & Attribute.Private;
     confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
@@ -867,16 +871,40 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    dateNaissance: Attribute.Date;
     email: Attribute.Email &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    etablissement: Attribute.Enumeration<
+      [
+        'EPO',
+        'UPO',
+        'UO',
+        'ISIG',
+        'UNB',
+        'UOC',
+        'LOC',
+        'CNDE',
+        'LP-Arc',
+        'Bendr\u00E9',
+        'La Salle',
+        'LSNO',
+        'LSNB',
+        'LSND',
+        'LSNT'
+      ]
+    >;
+    firstName: Attribute.String;
+    lastName: Attribute.String;
     password: Attribute.Password &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    pays: Attribute.String;
+    phoneNumber: Attribute.BigInteger & Attribute.Required;
     provider: Attribute.String;
     resetPasswordToken: Attribute.String & Attribute.Private;
     role: Attribute.Relation<
@@ -897,6 +925,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         minLength: 3;
       }>;
+    ville: Attribute.String;
   };
 }
 

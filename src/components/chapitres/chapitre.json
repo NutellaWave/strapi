@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_chapitres_chapitres",
+  "info": {
+    "displayName": "chapitre",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "contenu": {
+      "type": "text"
+    },
+    "duree": {
+      "type": "string"
+    },
+    "termine": {
+      "type": "boolean"
+    }
+  }
+}
